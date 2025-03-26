@@ -23,9 +23,6 @@ const Footer = () => {
               Especialistas em BI, análise e visualização de dados, transformando
               informações em insights valiosos para o seu negócio.
             </p>
-            <p className="text-muted-foreground mb-3 text-sm">
-              CNPJ: 59.910.239/0001-41
-            </p>
             <div className="flex space-x-4">
               <a
                 href="https://facebook.com"
@@ -146,6 +143,9 @@ const Footer = () => {
           <p>
             &copy; {new Date().getFullYear()} InsightfulData. Todos os direitos
             reservados.
+          </p>
+          <p className="mt-2 text-sm">
+            CNPJ: 59.910.239/0001-41
           </p>
         </div>
       </div>

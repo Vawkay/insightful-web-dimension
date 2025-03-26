@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/use-toast";
 import { Loader2 } from "lucide-react";
+import { supabase } from "@/lib/supabase";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -32,10 +33,25 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulando o envio do formulário com um timeout
     try {
-      // Em um cenário real, aqui você faria uma chamada para sua API
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // Enviar dados para o Supabase
+      const { error } = await supabase
+        .from('Contato')
+        .insert([
+          { 
+            nome: formData.name,
+            email: formData.email,
+            telefone: formData.phone,
+            empresa: formData.company,
+            serviço: formData.service,
+            mensagem: formData.message,
+          }
+        ]);
+
+      if (error) {
+        console.error("Erro ao enviar contato:", error);
+        throw error;
+      }
 
       toast({
         title: "Mensagem enviada com sucesso!",
@@ -53,6 +69,7 @@ const ContactForm = () => {
         service: "Business Intelligence",
       });
     } catch (error) {
+      console.error("Erro no envio:", error);
       toast({
         title: "Erro ao enviar mensagem",
         description: "Por favor, tente novamente mais tarde.",
@@ -144,7 +161,6 @@ const ContactForm = () => {
           <option value="Business Intelligence">Business Intelligence</option>
           <option value="Data Analytics">Data Analytics</option>
           <option value="Visualização de Dados">Visualização de Dados</option>
-          <option value="Big Data">Big Data</option>
           <option value="Consultoria">Consultoria</option>
         </select>
       </div>

@@ -46,8 +46,8 @@ const Contact = () => {
       {/* Contact Content */}
       <div className="py-20">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
-            <div className="lg:col-span-2 order-2 lg:order-1 flex flex-col space-y-8">
+          <div className="max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
               <div className="glass-card rounded-xl p-6">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 mr-4">
@@ -95,14 +95,11 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-
             </div>
 
-            <div className="lg:col-span-3 order-1 lg:order-2">
-              <div className="glass-card rounded-xl p-6 md:p-8">
-                <h2 className="text-2xl font-bold mb-6">Envie uma mensagem</h2>
-                <ContactForm />
-              </div>
+            <div className="glass-card rounded-xl p-6 md:p-8">
+              <h2 className="text-2xl font-bold mb-6">Envie uma mensagem</h2>
+              <ContactForm />
             </div>
           </div>
         </div>

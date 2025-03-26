@@ -68,7 +68,7 @@ const TeamBubbles = () => {
                 <HoverCardTrigger asChild>
                   <div className="relative mx-auto cursor-pointer group">
                     <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-pink-500 via-insight-400 to-blue-500 opacity-70 blur-md group-hover:opacity-100 transition duration-300"></div>
-                    <Avatar className="w-32 h-32 md:w-40 md:h-40 border-4 border-background relative">
+                    <Avatar className="w-32 h-32 md:w-40 md:h-40 relative">
                       <AvatarImage 
                         src={member.image} 
                         alt={member.name} 
@@ -78,11 +78,11 @@ const TeamBubbles = () => {
                     </Avatar>
                   </div>
                 </HoverCardTrigger>
-                <HoverCardContent className="glass-card w-80 p-0 border-0 shadow-lg">
+                <HoverCardContent className="glass-card w-80 p-0 shadow-lg border-0">
                   <div className="relative pt-12 pb-6 px-6">
                     <div className="absolute -top-12 left-0 right-0 flex justify-center">
-                      <Avatar className="w-24 h-24 border-4 border-background">
-                        <AvatarImage src={member.image} alt={member.name} />
+                      <Avatar className="w-24 h-24">
+                        <AvatarImage src={member.image} alt={member.name} className="object-cover" />
                         <AvatarFallback>{member.name[0]}</AvatarFallback>
                       </Avatar>
                     </div>
