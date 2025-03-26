@@ -3,10 +3,11 @@ import React, { useRef, useState, useCallback } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Badge } from "@/components/ui/badge";
-import { useEmblaCarousel } from "embla-carousel-react";
+import { UseEmblaCarouselType } from "embla-carousel-react";
 
 const ProjectCarousel = () => {
-  const [emblaRef, setEmblaRef] = useState<ReturnType<typeof useEmblaCarousel>>(null);
+  // Use the correct type for the embla reference
+  const [emblaRef, setEmblaRef] = useState<ReturnType<typeof UseEmblaCarouselType>>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   // Fixed onSelect handler to properly work with typescript
