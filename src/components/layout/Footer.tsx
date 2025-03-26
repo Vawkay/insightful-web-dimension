@@ -9,7 +9,12 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <Link to="/" className="inline-block mb-6">
+            <Link to="/" className="inline-flex items-center space-x-2 mb-6">
+              <img 
+                src="/lovable-uploads/9affbacb-506d-4711-a264-b1f2fb158981.png" 
+                alt="InsightfulData Logo" 
+                className="h-10 w-10" 
+              />
               <span className="font-display font-bold text-2xl text-gradient">
                 InsightfulData
               </span>
@@ -17,6 +22,9 @@ const Footer = () => {
             <p className="text-muted-foreground mb-6">
               Especialistas em BI, análise e visualização de dados, transformando
               informações em insights valiosos para o seu negócio.
+            </p>
+            <p className="text-muted-foreground mb-3 text-sm">
+              CNPJ: 59.910.239/0001-41
             </p>
             <div className="flex space-x-4">
               <a
@@ -58,14 +66,6 @@ const Footer = () => {
                   className="text-muted-foreground hover:text-white transition-colors"
                 >
                   Início
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/sobre"
-                  className="text-muted-foreground hover:text-white transition-colors"
-                >
-                  Sobre Nós
                 </Link>
               </li>
               <li>
@@ -120,22 +120,6 @@ const Footer = () => {
                   className="text-muted-foreground hover:text-white transition-colors"
                 >
                   Visualização de Dados
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/servicos"
-                  className="text-muted-foreground hover:text-white transition-colors"
-                >
-                  Big Data
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/servicos"
-                  className="text-muted-foreground hover:text-white transition-colors"
-                >
-                  Consultoria
                 </Link>
               </li>
             </ul>

@@ -5,11 +5,8 @@ import Footer from "@/components/layout/Footer";
 import CTASection from "@/components/home/CTASection";
 import { 
   BarChart3, 
-  Database, 
   LineChart, 
-  PieChart, 
-  TrendingUp,
-
+  PieChart,
   Search,
   Monitor,
   UserCheck,
@@ -61,34 +58,6 @@ const services = [
     ],
     icon: <PieChart className="h-10 w-10 text-insight-400" />,
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop",
-  },
-  {
-    id: 4,
-    title: "Big Data",
-    description:
-      "Processamento e análise de grandes volumes de dados para extrair valor e vantagem competitiva em tempo real.",
-    features: [
-      "Processamento distribuído",
-      "Análise de streaming",
-      "Armazenamento escalável",
-      "ETL de alto desempenho"
-    ],
-    icon: <Database className="h-10 w-10 text-insight-400" />,
-    image: "https://images.unsplash.com/photo-1599658880307-95d394a66dbf?q=80&w=1470&auto=format&fit=crop",
-  },
-  {
-    id: 5,
-    title: "Analytics Preditivo",
-    description:
-      "Modelos de previsão baseados em IA que antecipam tendências e orientam decisões futuras para o crescimento sustentável.",
-    features: [
-      "Machine Learning aplicado",
-      "Modelos de previsão",
-      "Detecção de padrões",
-      "Análise de série temporal"
-    ],
-    icon: <TrendingUp className="h-10 w-10 text-insight-400" />,
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1469&auto=format&fit=crop",
   },
 ];
 

@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -34,6 +34,11 @@ const Navbar = () => {
             className="flex items-center space-x-2"
             onClick={() => setIsOpen(false)}
           >
+            <img 
+              src="/lovable-uploads/9affbacb-506d-4711-a264-b1f2fb158981.png" 
+              alt="InsightfulData Logo" 
+              className="h-10 w-10" 
+            />
             <span className="font-display font-bold text-2xl text-gradient">
               InsightfulData
             </span>
@@ -46,12 +51,6 @@ const Navbar = () => {
               className="text-white/90 hover:text-white transition-colors"
             >
               Início
-            </Link>
-            <Link
-              to="/sobre"
-              className="text-white/90 hover:text-white transition-colors"
-            >
-              Sobre Nós
             </Link>
             <Link
               to="/servicos"
@@ -101,13 +100,6 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Início
-              </Link>
-              <Link
-                to="/sobre"
-                className="block text-white/90 hover:text-white transition-colors py-2"
-                onClick={() => setIsOpen(false)}
-              >
-                Sobre Nós
               </Link>
               <Link
                 to="/servicos"

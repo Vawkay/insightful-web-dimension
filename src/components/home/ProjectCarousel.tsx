@@ -68,8 +68,10 @@ const ProjectCarousel = () => {
             opts={{ loop: true }}
             className="w-full"
             onSelect={(api) => {
-              const selectedIndex = api?.selectedScrollSnap() || 0;
-              setActiveIndex(selectedIndex);
+              if (api) {
+                const selectedIndex = api.selectedScrollSnap();
+                setActiveIndex(selectedIndex);
+              }
             }}
           >
             <CarouselContent>

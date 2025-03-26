@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ContactForm from "@/components/contact/ContactForm";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 const Contact = () => {
   useEffect(() => {
@@ -52,26 +52,6 @@ const Contact = () => {
                 <div className="flex items-start">
                   <div className="flex-shrink-0 mr-4">
                     <div className="w-12 h-12 rounded-full bg-insight-900/50 flex items-center justify-center">
-                      <MapPin className="h-6 w-6 text-insight-400" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">Endereço</h3>
-                    <p className="text-muted-foreground">
-                      Av. Paulista, 1000, Bela Vista
-                      <br />
-                      São Paulo - SP, 01310-100
-                      <br />
-                      Brasil
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="glass-card rounded-xl p-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 mr-4">
-                    <div className="w-12 h-12 rounded-full bg-insight-900/50 flex items-center justify-center">
                       <Mail className="h-6 w-6 text-insight-400" />
                     </div>
                   </div>
@@ -116,18 +96,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="glass-card rounded-xl overflow-hidden">
-                <iframe
-                  title="Mapa da localização"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1044351894437!2d-46.6545844!3d-23.564091399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1693925547035!5m2!1spt-BR!2sbr"
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
             </div>
 
             <div className="lg:col-span-3 order-1 lg:order-2">
