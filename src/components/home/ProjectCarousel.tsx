@@ -105,20 +105,6 @@ const ProjectCarousel = () => {
           <CarouselNext className="right-2 md:-right-12" />
         </Carousel>
         
-        <div className="flex justify-center gap-1 mt-8">
-          {projects.map((_, i) => (
-            <button
-              key={i}
-              aria-label={`Go to slide ${i + 1}`}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                activeIndex === i
-                  ? "bg-insight-400"
-                  : "bg-insight-900/50 hover:bg-insight-800"
-              }`}
-              onClick={() => emblaRef?.emblaApi?.scrollTo(i)}
-            />
-          ))}
-        </div>
       </div>
     </section>
   );

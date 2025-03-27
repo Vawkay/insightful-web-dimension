@@ -66,7 +66,7 @@ const TeamBubbles = () => {
             <div key={member.id} className="text-center">
               <HoverCard>
                 <HoverCardTrigger asChild>
-                  <div className="relative mx-auto cursor-pointer group">
+                  <div className="relative mx-auto cursor-pointer group max-w-fit">
                     <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-pink-500 via-insight-400 to-blue-500 opacity-70 blur-md group-hover:opacity-100 transition duration-300"></div>
                     <Avatar className="w-32 h-32 md:w-40 md:h-40 relative">
                       <AvatarImage 
@@ -122,7 +122,7 @@ const TeamBubbles = () => {
                 </HoverCardContent>
               </HoverCard>
               <h3 className="text-lg font-semibold mt-4">{member.name}</h3>
-              <p className="text-insight-300 text-sm">{member.role}</p>
+              <p className="text-insight-300 text-sm max-w-[160px]">{member.role}</p>
             </div>
           ))}
         </div>
